@@ -13,4 +13,7 @@ export default {
 
 <style lang="scss">
 @import "./assets/_global.scss";
+#app{
+  min-height: 100vh;
+}
 </style>

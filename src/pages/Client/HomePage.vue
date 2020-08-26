@@ -50,6 +50,10 @@ export default {
 <style lang="scss">
 .home-page {
   // padding: 50px 0;
+  background-image: linear-gradient(-45deg, #209077 0%, #1ae28a 100%);
+  background-repeat: no-repeat;
+  color: white;
+  min-height: 100vh;
   &__content {
     padding: 50px 0;
   }

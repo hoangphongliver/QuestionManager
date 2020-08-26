@@ -39,11 +39,11 @@ export default {
         margin-bottom: 15px;
         padding: 12px 12px 12px 20px;
         background: #f2f3f5;
-        border-radius: 7px;
+        border-radius: 35px;
+        color: #666666;
 
         &:hover {
-          background: #16a45c;
-          color: white;
+          opacity: 0.85;
         }
       }
     }
