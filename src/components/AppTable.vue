@@ -47,7 +47,7 @@
               >
                 {{ key.toUpperCase() }}:
               </b>
-              <span v-else>{{ key.toUpperCase() }}:</span>
+              <span variant="success" v-else>{{ key.toUpperCase() }}:</span>
             </b-col>
             <b-col v-if="row.item.rightAnswer === key.toUpperCase()">
               <b>{{ item }}</b></b-col
