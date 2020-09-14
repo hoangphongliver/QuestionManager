@@ -31,7 +31,6 @@ export default {
       type: Object,
       default: () => ({})
     },
-    picturePopup: false,
     size: {
       type: String,
       default: () => "xl"
@@ -75,4 +74,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

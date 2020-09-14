@@ -1,17 +1,18 @@
 import axios from 'axios';
 export const API = {
-  getQuestionTypeList() {
+  getQuestionTypeList(params) {
+    const query = `page=${params.page}&limit=${params.limit}&search=${params.search}&sortBy=${params.sortBy}&order=${params.order}`
     return axios({
       method: 'GET',
-      url: 'https://5e68fb97d426c00016b7e9bb.mockapi.io/api/v1/Category'
+      url: `https://5e68fb97d426c00016b7e9bb.mockapi.io/api/v1/Category?${query}`
     })
   },
 
-  addQuestionTypeList(body) {
+  addQuestionTypeList(payload) {
     return axios({
       method: 'POST',
       url: 'https://5e68fb97d426c00016b7e9bb.mockapi.io/api/v1/Category',
-      data: body
+      data: payload.body
     })
   },
 
@@ -30,10 +31,12 @@ export const API = {
     })
   },
 
-  getQuestionList(questionID) {
+  getQuestionList(payload) {
+    const params = payload.params;
+    const query = `page=${params.page}&limit=${params.limit}&search=${params.search}&sortBy=${params.sortBy}`;
     return axios({
       method: 'GET',
-      url: `https://5e68fb97d426c00016b7e9bb.mockapi.io/api/v1/Category/${questionID}/Questions`
+      url: `https://5e68fb97d426c00016b7e9bb.mockapi.io/api/v1/Category/${payload.questionTypeID}/Questions?${query}`
     })
   },
 
